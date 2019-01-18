@@ -1,0 +1,71 @@
+{
+  "displayName": "Starter Project",
+  "name": "starter-project",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "Fancy started project",
+  "author": {
+    "name": "Karen"
+  },
+  "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "events": [
+    {
+      "displayName": " sampleEvent",
+      "name": "-sampleevent",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/events/sampleevent.js",
+      "viewPath": "events/sampleevent.html"
+    }
+  ],
+  "conditions": [
+    {
+      "displayName": "sampleCondition",
+      "name": "samplecondition",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/conditions/samplecondition.js",
+      "viewPath": "conditions/samplecondition.html"
+    }
+  ],
+  "actions": [
+    {
+      "displayName": "sampleAction",
+      "name": "sampleaction",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/sampleaction.js",
+      "viewPath": "actions/sampleaction.html"
+    }
+  ],
+  "dataElements": [
+    {
+      "displayName": "sampleDE",
+      "name": "samplede",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/samplede.js",
+      "viewPath": "dataElements/samplede.html"
+    }
+  ]
+}

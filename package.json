@@ -1,0 +1,17 @@
+{
+  "name": "launch-starter-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@adobe/reactor-packager": "^3.0.2",
+    "@adobe/reactor-sandbox": "^10.1.1",
+    "@adobe/reactor-scaffold": "^2.1.0",
+    "@adobe/reactor-turbine": "^25.4.0"
+  }
+}

@@ -1,7 +1,7 @@
 # Adobe Launch Starter Extension
 
 This is a sample Adobe Launch Extension created using a starting template. 
-Launch extension development documentation can be found, [here](http://developer.adobelaunch.com/guides/extensions/)
+Launch extension development documentation can be found[here](http://developer.adobelaunch.com/guides/extensions/).
 
 ## Development
 

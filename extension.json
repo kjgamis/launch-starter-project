@@ -39,7 +39,7 @@
       "libPath": "src/lib/events/enterCode.js"
     },
     {
-      "displayName": "delay",
+      "displayName": "Delay",
       "name": "delay",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -76,7 +76,7 @@
       "viewPath": "actions/sampleaction.html"
     },
     {
-      "displayName": "alert message",
+      "displayName": "Alert Message",
       "name": "alert-message",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",

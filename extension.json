@@ -27,6 +27,27 @@
       },
       "libPath": "src/lib/events/sampleevent.js",
       "viewPath": "events/sampleevent.html"
+    },
+    {
+      "displayName": "Enter Code",
+      "name": "enter-code",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/events/enterCode.js"
+    },
+    {
+      "displayName": "delay",
+      "name": "delay",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/events/delay.js",
+      "viewPath": "events/delay.html"
     }
   ],
   "conditions": [
@@ -53,6 +74,17 @@
       },
       "libPath": "src/lib/actions/sampleaction.js",
       "viewPath": "actions/sampleaction.html"
+    },
+    {
+      "displayName": "alert message",
+      "name": "alert-message",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/alertMessage.js",
+      "viewPath": "actions/alertMessage.html"
     }
   ],
   "dataElements": [

@@ -5,7 +5,15 @@
     <title>Event</title>
   </head>
   <body>
-    Event Template
+    <form>
+      <h2>Set Delay</h2>
+    
+      <p>
+        <label for="delay">Delay</label>
+        <input id="delay" type="number">
+      </p>
+    
+    </form>
 
     <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
     <script>
@@ -13,15 +21,25 @@
         init: function(info) {
           if (info.settings) {
             // TODO Populate form values from persisted settings.
+            document.querySelector('#delay').value = info.settings.delay;
+          } else {
+            document.querySelector('#delay').value = 1000;
           }
         },
 
         getSettings: function() {
           // TODO Return settings object from form values.
+          return {
+            delay: document.querySelector('#delay').value
+          }
         },
 
         validate: function() {
           // TODO Return whether settings are valid.
+          var delayField = document.getElementById('delay');
+          var delay = Number(delayField.value);
+          delayField.invalid = isNaN(delay) || delay < 1;
+          return !delayField.invalid;
         }
       });
     </script>

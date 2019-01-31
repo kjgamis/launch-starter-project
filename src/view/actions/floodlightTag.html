@@ -5,7 +5,33 @@
     <title>Action</title>
   </head>
   <body>
-    Action Template
+    <form>
+      <h2>Floodlight Tag</h2>
+
+      <p>
+        <label for="advertiserId">Advertiser ID</label><br>
+        <input id="advertiserId" type="text">
+      </p>
+
+    <p>
+      <label for="groupId">Group ID</label><br>
+      <input id="groupId" type="text">
+    </p>
+
+    <p>
+      <label for="activityId">Activity ID</label><br>
+      <input id="activityId" type="text">
+    </p>
+
+    <div id='counting-methods'>
+      <input type="radio" id="standard" name="counting-method" value="standard" checked='checked'>
+      <label for="standard">Standard</label>
+
+      <input type="radio" id="unique" name="counting-method" value="unique">
+      <label for="unique">Unique</label>
+    </div>
+
+    </form>
 
     <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
     <script>
@@ -13,15 +39,40 @@
         init: function(info) {
           if (info.settings) {
             // TODO Populate form values from persisted settings.
+            document.querySelector('#advertiserId').value = info.settings.advertiserId;
+            document.querySelector('#groupId').value = info.settings.groupId;
+            document.querySelector('#activityId').value = info.settings.activityId;
+            document.querySelector('input[name="counting-method"]:checked').value = info.settings.countingMethod;
+          } else {
+            document.querySelector('#advertiserId').value = '';
+            document.querySelector('#groupId').value = '';
+            document.querySelector('#activityId').value = '';
           }
         },
 
         getSettings: function() {
           // TODO Return settings object from form values.
+          return {
+            advertiserId:   document.querySelector('#advertiserId').value,
+            groupId:        document.querySelector('#groupId').value,
+            activityId:     document.querySelector('#activityId').value,
+            countingMethod: document.querySelector('input[name="counting-method"]:checked').value 
+          }
         },
 
         validate: function() {
           // TODO Return whether settings are valid.
+          var valid = false;
+          var advertiserId   = document.querySelector('#advertiserId').value;
+          var groupId        = document.querySelector('#groupId').value;
+          var activityId     = document.querySelector('#activityId').value;
+          var countingMethod = document.querySelector('input[name="counting-method"]:checked').value
+
+          if (advertiserId && groupId && activityId) {
+            valid = true;
+          }
+
+          return valid;
         }
       });
     </script>

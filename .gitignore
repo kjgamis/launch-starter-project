@@ -1,5 +1,5 @@
-*.sandbox
 *.log
 
+.sandbox/
 node_modules/
 .vscode/

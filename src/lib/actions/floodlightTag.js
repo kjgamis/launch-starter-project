@@ -1,38 +1,4 @@
 'use strict';
-
-// ========================================
-// ============= gtag library =============
-// ========================================
-
-
-var gtagReady = 'false';
-console.log('***** ' + window.gtagReady + ' *****')
-
-var gtag = document.createElement('script');
-console.log('***** ' + window.gtag + ' *****')
-gtag.src = 'https://www.googletagmanager.com/gtag/js?id=UA-132575550-1&l=gTagLayer';
-document.head.appendChild(gtag);
-
-function gtag() { window.gTagLayer.push(arguments); }
-
-try {
-  window.gTagLayer = window.gTagLayer || [];
-  gtag('js', new Date());
-  gtag('config', 'DC-6587013');
-
-} catch (error) {
-  console.log(error)
-  _satellite.logger.error(error);
-}
-/* End of global snippet: Please do not remove */
-
-/* global function for firing gtag pixel */
-if (typeof gtag === 'function') {
-  gtagReady = 'true';
-}
-
-// ========= end of gtag library ==========
-
 // =============== floodlight example =================
 
 // gtag('event', 'conversion', { 
@@ -57,6 +23,8 @@ module.exports = function(settings) {
     },
     settings.advertiserId + '/' + settings.groupId + '/' + settings.activityId + '/' + settings.countingMethod
   );
+
+  function gtag() { window.gTagLayer.push(arguments); }
 
   gtag('event', 'conversion', { 
     'allow_custom_scripts': true, 

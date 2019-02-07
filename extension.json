@@ -96,6 +96,16 @@
       },
       "libPath": "src/lib/actions/floodlightTag.js",
       "viewPath": "actions/floodlightTag.html"
+    },
+    {
+      "displayName": "Load gtag Library",
+      "name": "load-gtag-library",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/loadGtagLibrary.js"
     }
   ],
   "dataElements": [

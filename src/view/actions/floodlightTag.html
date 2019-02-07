@@ -3,34 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>Action</title>
+    <link rel="stylesheet" href="//assets.adobedtm.com/activation/reactor/coralui/3.17.0/css/coral.css">
   </head>
   <body>
-    <form>
-      <h2>Floodlight Tag</h2>
-
-      <p>
-        <label for="advertiserId">Advertiser ID</label><br>
-        <input id="advertiserId" type="text">
-      </p>
-
-    <p>
-      <label for="groupId">Group ID</label><br>
-      <input id="groupId" type="text">
-    </p>
-
-    <p>
-      <label for="activityId">Activity ID</label><br>
-      <input id="activityId" type="text">
-    </p>
-
-    <div id='counting-methods'>
-      <input type="radio" id="standard" name="counting-method" value="standard" checked='checked'>
-      <label for="standard">Standard</label>
-
-      <input type="radio" id="unique" name="counting-method" value="unique">
-      <label for="unique">Unique</label>
-    </div>
-
+    <h2>Floodlight Tag</h2>
+    <form class="coral-Form coral-Form--aligned u-columnLarge">
+      <section class="coral-Form-fieldset">
+    
+        <div class="coral-Form-fieldwrapper">
+          <label for="advertiserId" class="coral-Form-fieldlabel" id="label-aligned-textfield-0">Advertiser ID</label>
+          <input id="advertiserId" type="text" is="coral-textfield" class="coral-Form-field" placeholder="Enter ID" name="advertiserID"
+            labelledby="label-aligned-textfield-0">
+        </div>
+    
+        <div class="coral-Form-fieldwrapper">
+          <label for="groupId" class="coral-Form-fieldlabel" id="label-aligned-textfield-0">Group ID</label>
+          <input id="groupId" type="text" is="coral-textfield" class="coral-Form-field" placeholder="Enter ID" name="advertiserID"
+            labelledby="label-aligned-textfield-0">
+        </div>
+    
+        <div class="coral-Form-fieldwrapper">
+          <label for="activityId" class="coral-Form-fieldlabel" id="label-aligned-textfield-0">Activity ID</label>
+          <input id="activityId" type="text" is="coral-textfield" class="coral-Form-field" placeholder="Enter ID" name="advertiserID"
+            labelledby="label-aligned-textfield-0">
+        </div>
+    
+        <div id='counting-methods' class="coral-Form-fieldwrapper">
+          <input type="radio" id="standard" name="counting-method" value="standard" checked='checked'>
+          <label for="standard">Standard</label>
+    
+          <input type="radio" id="unique" name="counting-method" value="unique">
+          <label for="unique">Unique</label>
+        </div>
+      </section>
     </form>
 
     <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
